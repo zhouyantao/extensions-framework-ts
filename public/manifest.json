@@ -1,0 +1,31 @@
+{
+    "name": "__MSG_name__",
+    "description": "This extension is made for demonstration purposes",
+    "version": "1.0",
+    "manifest_version": 3,
+    "default_locale": "zh_CN",
+    "action":{},
+    "background": {
+       "service_worker": "background.js"
+    },
+    "content_scripts":[
+      {
+         "js": ["content.js"],
+         "matches": ["<all_urls>"],
+         "run_at": "document_end"
+      }
+    ],
+    "web_accessible_resources": [
+      {
+         "resources": ["assets/images/*.png"],
+         "matches": ["<all_urls>"]
+      }
+    ],
+    "permissions": [
+      "activeTab",
+      "scripting"
+   ],
+   "host_permissions": [
+      "*://explorer.btc.com/*"
+   ]
+ }

@@ -1,0 +1,6 @@
+export enum MessageType{
+ TEST="TEST",
+ SAVE_DATA="SAVE_DATA",
+ GET_DATA="GET_DATA",
+ DET_TASK="DET_TASK"
+}
